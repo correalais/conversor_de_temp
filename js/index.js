@@ -7,9 +7,11 @@ document.addEventListener("DOMContentLoaded", function(){
         if (conversorC){
             var tempConvertida =  (conversorC * 1.8) + 32;
             document.querySelector('#fahrenheit').value = tempConvertida.toFixed(2);
-        } else {
+        } else if (conversorF) {
             var tempConvertida = (conversorF-32)/1.8;
             document.querySelector('#celsius').value = tempConvertida.toFixed(2);
+        } else {
+            alert ("Você precisa preencher uma das temperaturas!")
         }
     }
 
